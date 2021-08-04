@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Journal</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+	  <link rel="stylesheet" href="css/style.css">
+    
+      <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="js/createEntry.js"></script>
+  </head>
+  <body>
+
+    <section class="hero is-fullheight">
+        <h1 class="columnheader has-text-centered" > WELCOME TO YOUR PERSONAL JOURNAL</h1>
+        
+            <div class="container has-text-centered">
+           
+            <div class="columns is-8 is-variable ">
+            <!--
+            <div class="column is-one-third has-text-centered">
+                <img src="https://c.stocksy.com/a/Eo7000/z9/30022.jpg" alt="Journal flipped open to blank page"
+            </div>
+        -->
+                <div class="column is-one-third">
+                    <h5 class="subtitle is-5 has-text-centered columnsubheader">View Your Journal Entries</h5>
+                    <img src="https://c.stocksy.com/a/Eo7000/z9/30022.jpg" alt="Journal flipped open to blank page">
+                    <div class="control">
+                        <a href="viewEntry.html"> <button class="button1">View Entries</button> </a>
+                    </div>                    
+                </div>    
+
+                <div class="column is-one-third has-text-left">
+                    <h5 class="subtitle is-5 has-text-centered columnsubheader">Jot in Your Journal</h3>
+                    <div class="field">
+                        <label class="label">Title</label>
+                        <div class="control">
+                            <input class="input is-medium" type="text" id="entryTitle">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Date</label>
+                        <input class="input" type="date" id="entryDate">
+                    </div> 
+                    <div class="field">
+                        <label class="label">Mood</label>
+                        <div class="control">
+                            <div class="select" >
+                                <select id="entryMood">
+                                    <option value="" disabled selected>Select an option...</option>
+                                    <option value="Fabulous">Fabulous</option> 
+                                    <option value="Happy">Happy</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Upset">Upset</option>
+                                    <option value="Frustrated">Frustrated</option>
+                                    <option value="Excited">Excited</option>
+                                    <option value="Stressed">Stressed</option>
+                                    <option value="Exhausted">Exhausted</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Note</label>
+                        <div class="control">
+                            <textarea class="textarea is-medium" id="entryText"></textarea>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button1" onclick="handleNoteSubmit()">Submit Entry</button>
+                    </div>
+                </div>
+            
+          
+    
+    <div class="column is-one-third has-text-left">
+        <h5 class="subtitle is-5 has-text-centered">Jot in Your Journal</h3>
+        <div class="field">
+            <label class="label">Title</label>
+            <div class="control">
+                <input class="input is-medium" type="text" id="noteTitle">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Date</label>
+            <input class="input" type="date" id="noteDate">
+        </div>
+        <div class="field">
+            <label class="label">Mood</label>
+            <div class="control">
+                 <div class="select" id="noteMood">
+                    <select>
+                        <option>Fabulous</option> 
+                        <option>Happy</option>
+                        <option>Normal</option>
+                        <option>Upset</option>
+                        <option>Frustrated</option>
+                        <option>Excited</option>
+                        <option>Stressed</option>
+                        <option>Exhausted</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Note</label>
+            <div class="control">
+                <textarea class="textarea is-medium" id="noteText"></textarea>
+            </div>
+        </div>
+        <div class="control">
+            <button class="button1 is-link is-fullwidth has-text-weight-medium is-medium" onclick="handleNoteSubmit()">Submit Entry</button>
+        </div>
+    </div>
+            
+          </div>
+        </div>
+    </div>
+</section>
+      </div>
+        </div>
+        
+    </section>
+  
+  </body>
+</html>
+
+<!-- WELCOME HERO 
+            <div class="column is-two-thirds has-text-left">
+              <h1 class="title is-1">How was your day?</h1>
+              <h1 class="title is-3">
+                “I can shake off everything as I write. My sorrows disappear, my courage is reborn."
+              </h1>
+              <h1 class="subtitle is-5">
+                —Anne Frank
+              </h1>
+              <a href="viewNotes.html"><button class="button1 is-link has-text-weight-medium is-medium is-centered">Click Here</button></a>
+              to view your notes.
+            </div>
+            -->
+            <!-- NOTE FORM -->
+           

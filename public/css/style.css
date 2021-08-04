@@ -1,0 +1,75 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #CDE3D2;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 2rem;
+  font-family: 'Georgia', serif;
+  line-height: 2;
+  background-color: #CDE3D2;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-style: double;
+  border-color: #0B5563;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+.button1 {
+    background-color: #f7a197;
+    font-size: 21px;
+    padding: 10px 106px;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font-family: 'Bahnschrift', sans-serif;
+}
+
+.button1:hover {
+    color: #f88a77;
+    background-color: white;
+    border-color: #f88a77;
+    font-family: 'Bahnschrift', sans-serif;
+}
+
+.columnheader {
+  background-color: #0B5563;
+  color: white;
+  border: 2px solid white;
+  margin: 20px;
+  padding: 10px;
+  font-size: 40px;
+  font-family: 'Bahnschrift Light', sans-serif;
+}
+
+.columnsubheader {
+    background-color: #f7a197;
+    font-size: 20px;
+    padding: 10px 95px;
+    color: white;
+    border-style: solid;
+    border-color: white;
+}
+
+.Normal {
+    background: rgb(225, 230, 233);
+    border-bottom-style:  ridge;
+}
