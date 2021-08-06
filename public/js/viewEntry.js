@@ -12,16 +12,16 @@ window.onload = (event) => {
             console.log(googleUser)
             userName = googleUser.displayName;
             document.querySelector("#personalization").innerHTML="Journal Entries by " + userName; 
-            getNotes(googleUserId);
+            getNotes();
         } else {
             window.location = 'index.html';
         }
     })
 };
 
-const getNotes = (userId) => {
-    console.log("logged in as user:" + userId);
-    const dbRef = firebase.database().ref(`users/${userId}`);
+const getNotes = () => {
+    console.log("logged in as user:" + googleUserId);
+    const dbRef = firebase.database().ref(`users/${googleUserId}`);
     dbRef.on('value', (snapshot) => {
         renderData(snapshot.val());
     });
@@ -31,10 +31,22 @@ const renderData = (data) => {
     console.log(data);
     const destination = document.querySelector("#app");
     destination.innerHTML = "";
+    const moodFilter = document.querySelector("#moodFilter");
+    console.log(moodFilter.value);
+    console.log("mood filter")
 
     for(let key in data) {
         const entry = data[key];
-        destination.innerHTML += createCard(entry, key);
+        console.log(entry);
+        console.log('test');
+        console.log(entry.mood);
+        if(moodFilter.value=="") {
+            destination.innerHTML += createCard(entry, key);
+        } else if(moodFilter.value==entry.mood) {
+            destination.innerHTML += createCard(entry, key);
+        };
+            
+        
     };
 };
 
@@ -43,7 +55,9 @@ const createCard = (entry, entryId) => {
     return `<div class = "column is-one-quarter">
                 <div class = "card ">
                     <header class = "card-header ${entry.mood}">
-                        <p class = "card-header-title id=entryTitle"> ${entry.title} </p>
+                        <p class = "card-header-title" id="entryTitle"> ${entry.title} <br> ${entry.date} <br> ${entry.mood}</p>
+                        
+                       
 
                     </header>
                     <div class = "card-content ${entry.mood}">
@@ -77,7 +91,7 @@ const deleteNote = (entryId) => {
     console.log("delete");
     console.log(entryId);
     alert("Confirm that you want to delete a note.");
-    const noteToDeleteRef = firebase.database().ref(`users/${googleUserId}/${entryId}`);
+    const entryToDeleteRef = firebase.database().ref(`users/${googleUserId}/${entryId}`);
     entryToDeleteRef.remove();
 };
 

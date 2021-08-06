@@ -13,10 +13,8 @@ html {
 
 /* adjust typography defaults */
 .bodydiv {
-  margin-top: 6rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-bottom: 4rem;
+  margin-left: 10rem;
+  margin-top: 2rem;
   font-family: 'Bahnschrift', serif;
   line-height: 2;
   background-color: #CDE3D2;
@@ -61,7 +59,6 @@ video {
   padding: 10px;
   font-size: 40px;
   font-family: 'Bahnschrift Light', sans-serif;
-  font-weight: normal;
 }
 
 .columnsubheader {
@@ -151,35 +148,7 @@ video {
     text-align: center;
 }
 
-.white {
-    color: white;
-    font-weight: normal;
-}
-
 .pink {
     background-color:#f88a77;
     color: white;
-}
-.new {
-    padding-top: 1.5rem;
-    
-}
-
-.button2 {
-    background-color: #f7a197;
-    font-size: 18px;
-    padding: 5px 60px;
-    color: white;
-    border-style: solid;
-    border-color: white;
-    border-radius: 16px;
-    font-family: 'Bahnschrift', sans-serif;
-    text-align: center;
-}
-
-.centeredpic {
-    margin: auto;
-    width: 200px;
-    height: 150px;
-    overflow: hidden;
 }

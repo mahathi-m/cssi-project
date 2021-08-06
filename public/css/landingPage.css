@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+body{
+  
+  background-image: url("https://cdn.glitch.com/28c4fd6d-f401-4ee1-9155-baa4a200c63f%2Fwaves.jpeg?v=1627924523895");
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 100vh;
+}
+
+:root{
+  --primary-color:#5fa0cf;
+  --secondary-color:#82b2ff;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  border-radius: 10px;
+  width: 600px;
+  /*background-image: url("https://cdn.glitch.com/28c4fd6d-f401-4ee1-9155-baa4a200c63f%2Focean.jpg?v=1627919361404");*/
+  background-color: rgba(255, 255, 255, 0.3);
+    margin: 10px;
+}
+
+.fa-quote-left{
+  font-size:50px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.quote{
+  text-align: center;
+  font-style: italic;
+  color: black;
+}
+
+.author{
+  color: rgb(7, 49, 58);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top:10px;
+  margin-bottom: 5px;
+}
+
+hr{
+  margin: 10px 0;
+  width: 60%;
+  border: 1px solid #364ba788;
+}
+
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  color: rgb(11, 84, 99);
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgba(205, 227, 210, 0.651);
+  padding: 10px;
+  border-radius: 8px;
+  border-color: rgb(11, 84, 99);
+  border-style: solid;
+}
+
+button:focus{
+  outline: none;
+}
+
+.navbar {
+  background-color: #0B5563;
+  display: flex;
+  justify-content: space-between;
+  margin: -10px;
+  margin-bottom: 0px;
+  min-height: 80px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 30px;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: 'Bahnschrift Light', sans-serif;
+  font-size: 18px;
+}
+

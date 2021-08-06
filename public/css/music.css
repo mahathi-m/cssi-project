@@ -1,0 +1,34 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.music-container {
+  
+  padding: 20px 30px;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+.action-btn {
+  background-color: #CDE3D2;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 7.5rem;
+  margin-right: auto;
+  
+}
+.action-btn.action-btn-big {
+  color: black;
+  font-size: 30px;
+}
+
+.centeredTitle {
+    text-align: center;
+}
